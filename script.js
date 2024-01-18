@@ -33,17 +33,29 @@ console.log(car.getDetails());
 
 /* 5 */
 for (const key in person) {
-    console.log('- ' + person[key]);
+    console.log(person[key]);
 }
 
 
 /* 6 */
 const student = {
-    subjects: {
+    courses: [
+        {course: 'science', grade: 4},
+        {course: 'sport', grade: 3}
+    ]    
+}
+console.log(student);
 
+
+/* 7 */
+for (const c in student.courses) {
+    if (student.courses[c].course === 'science') {
+        student.courses[c].grade = 1;
+        // console.log(student.courses[c]);
+        break;
     }
 }
-/* 7 */
+console.log(student);
 
 
 /* 8 */
@@ -62,8 +74,6 @@ console.log(books);
 
 /* 9 */
 for (const b in books) {
-    // let b = books[book];
-    // console.log(b.title + ' by ' + b.author);
     console.log(books[b].title + ', ' + books[b].author);
 }
 
