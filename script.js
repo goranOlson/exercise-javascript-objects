@@ -39,11 +39,23 @@ for (const key in person) {
 
 /* 6 */
 const student = {
-    subjects: {
+    courses: [
+        {course: 'science', grade: 4},
+        {course: 'sport', grade: 3}
+    ]    
+}
+console.log(student);
 
+
+/* 7 */
+for (const c in student.courses) {
+    if (student.courses[c].course === 'science') {
+        student.courses[c].grade = 1;
+        // console.log(student.courses[c]);
+        break;
     }
 }
-/* 7 */
+console.log(student);
 
 
 /* 8 */
